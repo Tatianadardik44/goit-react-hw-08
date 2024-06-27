@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom"
-import HomePage from "../../pages/HomePage"
-import ContactsPage from "../../pages/ContactsPage"
-import RegistrationPage from "../../pages/RegistrationPage"
-import LoginPage from "../../pages/LoginPage"
-import NotFoundPage from "../../pages/NotFoundPage"
+import { Suspense, lazy } from "react"
 import AppBar from "../AppBar/AppBar"
 import css from "./App.module.css"
-
+const HomePage = lazy(() => import('../../pages/HomePage'))
+const ContactsPage = lazy(() => import('../../pages/ContactsPage'))
+const RegistrationPage = lazy(() => import('../../pages/RegistrationPage'))
+const LoginPage = lazy(() => import('../../pages/LoginPage'))
+const NotFoundPage = lazy(() => import('../../pages/NotFoundPage'))
+  
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className={css.content}>
       <AppBar />
+      <Suspense fallback = {<div>Loading page...</div>}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contacts" element={<ContactsPage />} />
@@ -21,6 +23,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+    </Suspense>
       
 </div>
   )
