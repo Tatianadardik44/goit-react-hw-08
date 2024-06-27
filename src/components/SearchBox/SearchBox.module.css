@@ -2,10 +2,17 @@
   margin-bottom: 20px;
   margin-left: 40px;
 }
+.inputSearch {
+  background-color: inherit;
+  border: 1px solid brown;
+}
 .inputSearch:hover {
   border-color: blue;
 }
 .inputSearch:focus {
   border-color: blue;
   outline: none;
+}
+.title {
+  color: brown;
 }

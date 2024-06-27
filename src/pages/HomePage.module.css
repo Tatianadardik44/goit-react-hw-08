@@ -1,1 +1,12 @@
-
+.homeBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emoji {
+  font-size: 4em;
+}
+.title {
+  color: brown;
+}

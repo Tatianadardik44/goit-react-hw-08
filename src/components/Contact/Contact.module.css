@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid brown;
   border-radius: 4px;
   padding: 8px;
   align-items: center;
@@ -10,12 +10,17 @@
 }
 .icon {
   padding-right: 6px;
+  color: brown;
 }
 .btn {
-  background-color: gray;
-  color: white;
-  border-color: black;
+  background-color: inherit;
+  color: brown;
+  border-color: brown;
 }
 .btn:hover {
-  background-color: blue;
+  background-color: brown;
+  color: white;
+}
+.name {
+  color: brown;
 }

@@ -1,5 +1,5 @@
 #root {
-  min-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -41,5 +41,7 @@
   color: #888;
 }
 .content {
-  min-width: 1280px;
+  min-width: 1158px;
+
+  margin-left: 100px;
 }

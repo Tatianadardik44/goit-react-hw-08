@@ -10,7 +10,7 @@ const SearchBox = () => {
     }
     return (
         <div className={css.searchBox}>
-            <p><b>Find contacts by name</b></p>
+            <p className={css.title}><b>Find contacts by name</b></p>
             <input type="text"  onChange={handleChange} className={css.inputSearch }></input>
         </div>
     )

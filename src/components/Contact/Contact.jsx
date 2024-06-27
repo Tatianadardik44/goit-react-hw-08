@@ -14,8 +14,8 @@ const Contact = ({ contact }) => {
         <div className={css.contact}> 
             
          <div>
-            <p><FaUserLarge className={css.icon }/>{contact.name}</p>
-            <p> <FaPhone className={css.icon }/>{contact.number}</p>
+            <p className={css.name}><FaUserLarge className={css.icon }/>{contact.name}</p>
+            <p className={css.name}> <FaPhone className={css.icon }/>{contact.number}</p>
             </div>
          <div>
            <button className={css.btn} onClick={handleDelete}>

@@ -1,7 +1,7 @@
 .form {
   max-width: 260px;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid brown;
   border-radius: 4px;
   margin-left: 40px;
 }
@@ -14,17 +14,30 @@
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
-  background-color: gray;
-  color: white;
-  border-color: black;
+  background-color: inherit;
+  color: brown;
+  border-color: brown;
 }
 .btn:hover {
-  background-color: blue;
+  background-color: brown;
+  color: white;
 }
 .span {
   color: red;
 }
+.inputForm {
+  background-color: inherit;
+  border: 1px solid brown;
+}
 .inputForm:hover {
-  border-color: blue;
+  border-color: black;
   outline: none;
+}
+.inputForm:focus {
+  outline: none;
+  background-color: inherit;
+}
+
+.label {
+  color: brown;
 }
