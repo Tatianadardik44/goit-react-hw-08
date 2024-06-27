@@ -1,6 +1,10 @@
+import RegistrationForm from "../components/RegistrationForm/RegistrationForm"
+
 const RegistrationPage = () => {
     return (
-        <div>Registration Page</div>
+        <div>
+            <RegistrationForm />
+        </div>
     )
 }
 export default RegistrationPage
