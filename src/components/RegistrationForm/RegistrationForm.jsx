@@ -2,6 +2,8 @@ import { Field, Form, Formik } from "formik"
 import { useId } from "react";
 import * as Yup from "yup";
 import css from "./RegistrationForm.module.css"
+import { useDispatch } from "react-redux";
+
 const FeedbackSchema = Yup.object().shape({
     name: Yup.string()
      .min(3, 'Too Short!')
@@ -23,11 +25,12 @@ const initialValues = {
     
 }
 const RegistrationForm = () => {
+    const dispatch = useDispatch()
     const nameId = useId();
     const emailId = useId();
     const passwordId = useId();
     const handleSubmit = (values, actions) => {
-        console.log("hello");
+      console.log(values);
          actions.resetForm();
     }
     return (

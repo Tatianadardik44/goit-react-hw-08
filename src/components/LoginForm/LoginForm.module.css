@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  min-height: 60px;
+  background-color: beige;
+  color: brown;
+}
+.btn {
+  margin-top: 40px;
+  border: 1px solid brown;
+  background-color: inherit;
+  color: brown;
+}
+.btn:hover {
+  background-color: brown;
+  color: white;
+}
+.formBox {
+  border: 2px solid brown;
+  border-radius: 4px;
+  padding: 20px;
+}
+.inputBackground {
+  background-color: beige;
+  border: 1px solid brown;
+}
