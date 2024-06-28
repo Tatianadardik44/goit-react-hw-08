@@ -3,6 +3,7 @@ import { useId } from "react";
 import * as Yup from "yup";
 import css from "./RegistrationForm.module.css"
 import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
 
 const FeedbackSchema = Yup.object().shape({
     name: Yup.string()
@@ -30,7 +31,7 @@ const RegistrationForm = () => {
     const emailId = useId();
     const passwordId = useId();
     const handleSubmit = (values, actions) => {
-      console.log(values);
+     dispatch(register(values) )
          actions.resetForm();
     }
     return (

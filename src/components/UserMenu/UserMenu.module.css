@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+}
+.titleMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+}
+.btnMenu {
+  padding: 4px 16px;
+  margin-left: 16px;
+  background-color: inherit;
+  border: 1px solid brown;
+  color: brown;
+}
+.btnMenu:hover {
+  background-color: brown;
+  color: white;
+}
