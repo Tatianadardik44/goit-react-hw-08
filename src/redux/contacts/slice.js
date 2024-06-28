@@ -3,6 +3,7 @@ import { fetchContacts, addContact, deleteContact } from "./operations";
 
 import { selectContacts } from "./selectors";
 import { selectNameFilter } from "../filters/selectors";
+import { logOut } from "../auth/operations";
 
 
 
@@ -53,6 +54,11 @@ const contactsSlice = createSlice({
                 state.error = action.payload;
                 state.loading = false;
             })
+            .addCase(logOut.fulfilled, (state) => {
+                state.items = [];
+                state.error = null;
+                state.loading = false
+          })
   })
 
 
