@@ -11,7 +11,7 @@ const buildLinkClass = ({ isActive }) => {
 const Navigation = () => {
     const isLoggedIn = useSelector(selectIsLoggedIn)
     return (
-        <div className={css.header}>
+        <div className={css.headerNav}>
             <nav>
                 <NavLink to="/" className={buildLinkClass}>Home</NavLink>
                 {isLoggedIn &&  (<NavLink to="/contacts" className={buildLinkClass}>Contacts</NavLink>)}

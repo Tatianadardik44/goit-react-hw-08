@@ -9,3 +9,7 @@
 .active {
   color: red;
 }
+.headerAuth {
+  display: flex;
+  justify-content: flex-end;
+}

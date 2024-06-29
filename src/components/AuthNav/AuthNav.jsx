@@ -8,7 +8,7 @@ const buildLinkClass = ({ isActive }) => {
 
 const AuthNav = () => {
     return (
-        <div className={css.header}>
+        <div className={css.headerAuth}>
             <nav>
                 <NavLink to="/register" className={buildLinkClass}>Register</NavLink>
                 <NavLink to="/login" className={buildLinkClass}>Log In</NavLink>
