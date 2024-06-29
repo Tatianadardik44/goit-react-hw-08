@@ -46,6 +46,17 @@ export const logOut = createAsyncThunk("auth/logout",
 )
 export const refreshUser = createAsyncThunk("auth/refresh", 
     async (_, thunkAPI) => {
-       console.log(thunkAPI); 
+        const reduxState = thunkAPI.getState();
+        const savedTokin = reduxState.auth.token;
+        setAuthHeader(savedTokin);
+        const response = await axios.get("/users/current");
+        return response.data
+       
+    }, {
+        condition: (_, { getState }) => {
+            const reduxState = getState();
+            const savedTokin = reduxState.auth.token; 
+            return savedTokin !== null;
+        }
     }
 )

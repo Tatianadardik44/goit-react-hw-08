@@ -5,6 +5,7 @@ import css from "./LoginForm.module.css"
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth/operations";
 
+
   const FeedbackSchema = Yup.object().shape({
   
    email: Yup.string()
@@ -44,6 +45,7 @@ const LoginForm = () => {
                     <button type="submit" className={css.btn}>Log In</button>
                 </Form>
             </Formik>
+          
         </div>
     )
 }
