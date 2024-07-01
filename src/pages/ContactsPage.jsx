@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import pero from "../assets/pero-removebg-preview.png"
 import { useEffect } from "react";
 import css from "./ContactsPage.module.css"
@@ -14,7 +14,8 @@ const ContactsPage = () => {
    dispatch(fetchContacts())
   }, [dispatch])
     return (
-    <div className={css.contactBox}>
+      <div className={css.contactBox}>
+        
         <h1 className={css.title}>Phonebook</h1>
         <div className={css.pero}>
          <ContactsForm />

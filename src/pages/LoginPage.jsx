@@ -5,6 +5,7 @@ import LoginForm from "../components/LoginForm/LoginForm"
 const LoginPage = () => {
     return (
         <div className={css.loginPage}>
+            
             <LoginForm />
               <div className={css.box}>
                 <b className={css.text}>If you are not registered, take advantage of this opportunity</b>

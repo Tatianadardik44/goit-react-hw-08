@@ -3,6 +3,7 @@ import css from "./RegistrationPage.module.css"
 const RegistrationPage = () => {
     return (
         <div className={css.registerBox}>
+            
             <RegistrationForm />
         </div>
     )
