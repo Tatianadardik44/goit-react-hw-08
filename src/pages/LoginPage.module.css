@@ -22,6 +22,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  background-color: beige;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 245, 220, 0.5),
+      rgba(245, 245, 220, 0.5)
+    ),
+    url('../assets/login-page.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .text {
   color: brown;

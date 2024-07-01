@@ -1,14 +1,12 @@
 .form {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
 .input {
   display: flex;
   flex-direction: column;
   min-width: 240px;
   min-height: 60px;
-  background-color: beige;
   color: brown;
 }
 .btn {

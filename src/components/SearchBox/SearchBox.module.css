@@ -4,7 +4,7 @@
 }
 .inputSearch {
   background-color: inherit;
-  border: 1px solid brown;
+  border: 1px solid rgb(86, 0, 0);
 }
 .inputSearch:hover {
   border-color: blue;
@@ -14,5 +14,5 @@
   outline: none;
 }
 .title {
-  color: brown;
+  color: rgb(86, 0, 0);
 }

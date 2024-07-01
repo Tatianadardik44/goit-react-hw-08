@@ -1,26 +1,28 @@
 import { useDispatch, useSelector } from "react-redux";
-
+import pero from "../assets/pero-removebg-preview.png"
 import { useEffect } from "react";
 import css from "./ContactsPage.module.css"
 import ContactsForm from "../components/ContactsForm/ContactsForm";
 import SearchBox from "../components/SearchBox/SearchBox";
 import ContactList from "../components/ContactList/ContactList";
 import { fetchContacts } from "../redux/contacts/operations";
-import { selectErrorContact, selectLoadingContact } from "../redux/contacts/selectors";
+
 const ContactsPage = () => {
       const dispatch = useDispatch();
-  const loading = useSelector(selectLoadingContact);
-  const error = useSelector(selectErrorContact);
+
   useEffect(() => {
    dispatch(fetchContacts())
   }, [dispatch])
     return (
-    <div>
-      <h1 className={css.title}>Phonebook</h1>
-      <ContactsForm />
+    <div className={css.contactBox}>
+        <h1 className={css.title}>Phonebook</h1>
+        <div className={css.pero}>
+         <ContactsForm />
+        <img src={pero} alt="pero" width="200" height="200" />
+        </div>
+      
       <SearchBox />
-      {loading && <p>Loading contacts...</p>}
-      {error }
+     
             <ContactList />
     </div>
     )
