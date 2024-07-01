@@ -1,5 +1,5 @@
 .registerBox {
-  height: 100vh;
+  height: calc(100vh - 40px);
   background-color: beige;
   background-image: linear-gradient(
       to bottom,
