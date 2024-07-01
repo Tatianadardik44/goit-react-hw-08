@@ -70,7 +70,8 @@ const authSlice = createSlice({
    })
    .addCase(refreshUser.rejected, (state) => {
        state.loading = false;
-       state.error = true;
+     state.error = true;
+     state.token = null;
     })
 })
 // export default authSlice.reducer;

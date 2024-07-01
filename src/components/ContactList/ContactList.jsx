@@ -8,8 +8,10 @@ import { selectFilteredContacts } from "../../redux/contacts/slice"
 
 
 
+
 const ContactList = () => {
-  const filteredContacts = useSelector(selectFilteredContacts)
+    const filteredContacts = useSelector(selectFilteredContacts)
+  
     return (
         <ul className={css.listUser}>
             {filteredContacts.map(contact => (

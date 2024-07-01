@@ -7,6 +7,7 @@ import { refreshUser } from "../../redux/auth/operations"
 import { selectIsRefreshing } from "../../redux/auth/selectors"
 import   RestrictedRoute  from "../RestrictedRout/RestrictedRout"
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
+import Layout from "../Layout/Layout"
 
 const HomePage = lazy(() => import('../../pages/HomePage'))
 const ContactsPage = lazy(() => import('../../pages/ContactsPage'))
@@ -24,8 +25,7 @@ function App() {
 
   return isRefresing ? <b>Refreshing user , please wait...</b> :(
     <div className={css.content}>
-      <AppBar />
-      <Suspense fallback = {<div>Loading page...</div>}>
+    <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contacts" element={<PrivateRoute component={<ContactsPage />}/>} />
@@ -33,7 +33,7 @@ function App() {
         <Route path="/login" element={<RestrictedRoute component={<LoginPage />} />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </Suspense>
+   </Layout>
       
 </div>
   )
